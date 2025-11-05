@@ -1,278 +1,402 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Detail Produk</title>
-    </head>
-    <body>
-        <div>
-            <h1>Detail Tiap-Tiap Produk</h1>
-            <hr>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk | CV. Sumber Jaya Meubel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <style>
+      /* Styling khusus halaman detail agar tabel rapi */
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .produk-detail {
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .produk-detail img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        margin: 1rem 0;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .produk-detail table {
+        margin: 1rem auto;
+        border-collapse: collapse;
+        width: 90%;
+        max-width: 600px;
+        font-size: 1rem;
+        background-color: var(--card);
+        color: var(--text);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .produk-detail table td {
+        padding: 8px 12px;
+        vertical-align: top;
+      }
+
+      .produk-detail table tr td:first-child {
+        width: 100px;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      .produk-detail table tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      [data-theme="dark"] .produk-detail table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .produk-detail ol {
+        text-align: left;
+        display: inline-block;
+        margin: 1rem auto;
+        padding-left: 1.2rem;
+      }
+
+      .actions {
+        margin-top: 1rem;
+      }
+
+      .actions a {
+        margin: 0 8px;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid var(--accent);
+        margin: 2rem 0;
+        opacity: 0.2;
+      }
+
+      h3 {
+        margin-top: 1rem;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        <img src="img/logo.png" alt="Logo" />
+        <h2>CV. Sumber Jaya Meubel</h2>
+      </div>
+      <div class="header-right">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="produk.html">Produk</a>
+      <a href="detail.html">Detail</a>
+      <a href="about.html">Tentang</a>
+    </nav>
+
+    <main>
+      <h2>Detail Tiap Produk</h2>
+      <hr />
+
+      <!-- PRODUK 1 -->
+      <section class="produk-detail" id="produk-1">
+        <h3>1 Set Perabotan Ruang Tamu (Kayu)</h3>
+        <img src="img/produk-1-lg.jpg" alt="Produk 1" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 7.000.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>3</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Kayu Jati</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Jatinusa Abadi</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Sofa (kecil) @ 1 pcs</li>
+          <li>Sofa (sedang) @ 1 pcs</li>
+          <li>Sofa (besar) @ 1 pcs</li>
+          <li>Pijakan @ 1 pcs</li>
+          <li>Meja @ 1 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P1_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P1_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-1">
-            <p><u>Produk #1</u></p>
-            <div><img src="img/produk-1-lg.jpg"></div>
-            <h3>1 Set Perabotan Ruang Tamu (Kayu)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 7.000.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>3<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Kayu Jati<b></td>
-                        </tr>
-                        <tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Jatinusa Abadi<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Sofa (kecil) @ 1 pcs</li>
-                    <li>Sofa (sedang) @ 1 pcs</li>
-                    <li>Sofa (besar) @ 1 pcs</li>
-                    <li>Pijakan @ 1 pcs</li>
-                    <li>Meja @ 1 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P1_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P1_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
+        <hr />
+      </section>
+
+      <!-- PRODUK 2 -->
+      <section class="produk-detail" id="produk-2">
+        <h3>1 Set Perabotan Ruang Tamu (Logam)</h3>
+        <img src="img/produk-2-lg.jpg" alt="Produk 2" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 6.000.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>4</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Logam Baja</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Kreasi Mebel Nusantara</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Sofa (kecil) @ 1 pcs</li>
+          <li>Sofa (sedang) @ 1 pcs</li>
+          <li>Sofa (besar) @ 1 pcs</li>
+          <li>Meja (kecil) @ 2 pcs</li>
+          <li>Meja (besar) @ 2 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P2_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P2_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-2">
-            <p><u>Produk #2</u></p>
-            <div><img src="img/produk-2-lg.jpg"></div>
-            <h3>1 Set Perabotan Ruang Tamu (Logam)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 6.000.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>4<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Logam Baja<b></td>
-                        </tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Kreasi Mebel Nusantara<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Sofa (kecil) @ 1 pcs</li>
-                    <li>Sofa (sedang) @ 1 pcs</li>
-                    <li>Sofa (besar) @ 1 pcs</li>
-                    <li>Meja (kecil) @ 2 pcs</li>
-                    <li>Meja (besar) @ 2 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P2_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P2_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
+        <hr />
+      </section>
+
+      <!-- PRODUK 3 -->
+      <section class="produk-detail" id="produk-3">
+        <h3>1 Set Perabotan Ruang Makan (Kayu)</h3>
+        <img src="img/produk-3-lg.jpg" alt="Produk 3" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 4.000.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>5</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Kayu Meranti</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Indomebel Kreatif</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Kursi @ 4 pcs</li>
+          <li>Meja @ 1 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P3_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P3_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-3">
-            <p><u>Produk #3</u></p>
-            <div><img src="img/produk-3-lg.jpg"></div>
-            <h3>1 Set Perabotan Ruang Makan (Kayu)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 4.000.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>5<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Kayu Meranti<b></td>
-                        </tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Indomebel Kreatif<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Kursi @ 4 pcs</li>
-                    <li>Meja @ 1 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P3_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P3_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
+        <hr />
+      </section>
+
+      <!-- PRODUK 4 -->
+      <section class="produk-detail" id="produk-4">
+        <h3>1 Set Perabotan Ruang Makan (Logam)</h3>
+        <img src="img/produk-4-lg.jpg" alt="Produk 4" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 3.500.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>5</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Logam Aluminium</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Kreasi Mebel Nusantara</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Kursi @ 4 pcs</li>
+          <li>Meja @ 1 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P4_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P4_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-4">
-            <p><u>Produk #4</u></p>
-            <div><img src="img/produk-4-lg.jpg"></div>
-            <h3>1 Set Perabotan Ruang Makan (Logam)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 3.500.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>5<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Logam Aluminium<b></td>
-                        </tr>
-                        <tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Kreasi Mebel Nusantara<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Kursi @ 4 pcs</li>
-                    <li>Meja @ 1 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P4_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P4_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
+        <hr />
+      </section>
+
+      <!-- PRODUK 5 -->
+      <section class="produk-detail" id="produk-5">
+        <h3>Tempat Tidur Besar (Kayu)</h3>
+        <img src="img/produk-5-lg.jpg" alt="Produk 5" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 2.500.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>8</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Kayu Meranti</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Indomebel Kreatif</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Tempat Tidur @ 1 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P5_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P5_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-5">
-            <p><u>Produk #5</u></p>
-            <div><img src="img/produk-5-lg.jpg"></div>
-            <h3>Tempat Tidur Besar (Kayu)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 2.500.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>8<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Kayu Meranti<b></td>
-                        </tr>
-                        <tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Indomebel Kreatif<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Tempat Tidur @ 1 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P5_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P5_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
+        <hr />
+      </section>
+
+      <!-- PRODUK 6 -->
+      <section class="produk-detail" id="produk-6">
+        <h3>Tempat Tidur Besar (Logam)</h3>
+        <img src="img/produk-6-lg.jpg" alt="Produk 6" />
+        <table>
+          <tr>
+            <td>Harga</td>
+            <td>:</td>
+            <td><b>Rp. 2.000.000,-</b></td>
+          </tr>
+          <tr>
+            <td>Stok</td>
+            <td>:</td>
+            <td><b>10</b></td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>:</td>
+            <td><b>Logam Baja</b></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><b>PT Angkasa Mebel</b></td>
+          </tr>
+        </table>
+        <ol>
+          <li>Tempat Tidur @ 1 pcs</li>
+        </ol>
+        <div class="actions">
+          <a
+            class="btn-detail"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P6_BELI"
+            target="_blank"
+            >Beli</a
+          >
+          <a
+            class="btn-cart"
+            href="https://api.whatsapp.com/send?phone=62895343845423&text=P6_TANYA"
+            target="_blank"
+            >Tanya</a
+          >
         </div>
-        <div id="produk-6">
-            <p><u>Produk #6</u></p>
-            <div><img src="img/produk-6-lg.jpg"></div>
-            <h3>Tempat Tidur Besar (Logam)</h3>
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Harga</td>
-                            <td>:</td>
-                            <td><b>Rp. 2.000.000,-<b></td>
-                        </tr>
-                        <tr>
-                            <td>Stok Tersedia</td>
-                            <td>:</td>
-                            <td><b>10<b></td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>:</td>
-                            <td><b>Logam Baja<b></td>
-                        </tr>
-                        <tr>
-                            <td>Vendor</td>
-                            <td>:</td>
-                            <td><b>PT Angkasa Mebel<b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                List perabotan:
-                <ol type="1">
-                    <li>Tempat Tidur @ 1 pcs</li>
-                </ol>
-            </p>
-            <p>
-                Tindakan:
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P6_BELI">Beli</a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=62895343845423&text=P6_TANYA_(Pertanyaan Anda)">Tanya</a>
-            </p>
-            <hr>
-        </div>
-    </body>
+        <hr />
+      </section>
+    </main>
+
+    <footer>© 2025 CV. Sumber Jaya Meubel. Semua hak dilindungi.</footer>
+  </body>
 </html>
