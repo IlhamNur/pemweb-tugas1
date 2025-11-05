@@ -1,85 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CV. Sumber Jaya Meubel</title>
-    </head>
-    <body>
-        <div>
-            <img src="img/logo.png" width="28" height="28">
-            <h1>CV. Sumber Jaya Meubel</h1>
-            <hr>
-            <table border="1">
-                <tr>
-                    <td> <a href="index.html">Home</a></td>
-                    <td> <a href="produk.html">Produk</a></td>
-                    <td> <a href="about.html">Tentang</a></td>
-                </tr>
-            </table>
-        </div>
-        <h1>Daftar Produk</h1>
-        <h3>Temukan produk yang akan anda cari di sini</h3>
-        <br>
-        <table align="center" border="1">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Gambar</th>
-                    <th>Nama</th>
-                    <th>Harga</th>
-                    <th>Tersedia</th>
-                    <th>Tindakan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><img src="img/produk-1-sm.jpg" height="128"></td>
-                    <td>1 Set Perabotan Ruang Tamu (Kayu)</td>
-                    <td>Rp. 7.000.000,-</td>
-                    <td>3</td>
-                    <td><a target="_blank" href="detail.html#produk-1">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><img src="img/produk-2-sm.jpg" height="128"></td>
-                    <td>1 Set Perabotan Ruang Tamu (Logam)</td>
-                    <td>Rp. 6.000.000,-</td>
-                    <td>4</td>
-                    <td><a target="_blank" href="detail.html#produk-2">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><img src="img/produk-3-sm.jpg" height="128"></td>
-                    <td>1 Set Perabotan Ruang Makan (Kayu)</td>
-                    <td>Rp. 4.000.000,-</td>
-                    <td>5</td>
-                    <td><a target="_blank" href="detail.html#produk-3">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td><img src="img/produk-4-sm.jpg" height="128"></td>
-                    <td>1 Set Perabotan Ruang Makan (Logam)</td>
-                    <td>Rp. 3.500.000,-</td>
-                    <td>5</td>
-                    <td><a target="_blank" href="detail.html#produk-4">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td><img src="img/produk-5-sm.jpg" height="128"></td>
-                    <td>Tempat Tidur Besar (Kayu)</td>
-                    <td>Rp. 2.500.000,-</td>
-                    <td>8</td>
-                    <td><a target="_blank" href="detail.html#produk-5">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td><img src="img/produk-6-sm.jpg" height="128"></td>
-                    <td>Tempat Tidur Besar (Logam)</td>
-                    <td>Rp. 2.000.000,-</td>
-                    <td>10</td>
-                    <td><a target="_blank" href="detail.html#produk-6">Lihat Detail</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV. Sumber Jaya Meubel - Produk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="img/logo.png" alt="Logo" />
+        <h2>CV. Sumber Jaya Meubel</h2>
+      </div>
+      <div class="header-right">
+        <span class="cart-info">🛒 <span id="cart-count">0</span> item</span>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="produk.html">Produk</a>
+      <a href="about.html">Tentang</a>
+    </nav>
+
+    <main>
+      <h1>Daftar Produk</h1>
+      <h3>Temukan produk yang Anda cari di sini</h3>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari produk..." />
+      </div>
+
+      <div class="produk-grid" id="produkGrid">
+        <!-- Produk akan dimuat via JS -->
+      </div>
+    </main>
+
+    <footer>&copy; 2025 CV. Sumber Jaya Meubel. All rights reserved.</footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
