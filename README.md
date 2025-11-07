@@ -37,7 +37,7 @@ Website ini mendukung **tema gelap (dark mode)** dan **tema terang (light mode)*
 
 1. Download atau clone repositori ini.
    ```bash
-   git clone https://github.com/IlhamNur/pemweb-tugas1.git
+   git clone https://github.com/IlhamNur/toko-meubel.git
    ```
 
 2. Buka file `index.html` di browser favorit Anda.
